@@ -67,7 +67,7 @@ def callback():
     payload = json.dumps(payload)
     payload = json.loads(payload)
 
-    return json.dumps(payload['id'] + payload['name'])
+    return json.dumps(payload['id'] + " " + payload['name'])
 
 if __name__ == "__main__":
     app.run()
