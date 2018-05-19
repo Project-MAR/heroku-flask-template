@@ -60,7 +60,6 @@ def check_withlogin():
             }
         ]
     }
-    return json.dumps(payload)
 
 @app.route('/callback', methods=['POST'])
 def callback():
