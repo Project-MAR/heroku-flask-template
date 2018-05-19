@@ -64,8 +64,10 @@ def check_withlogin():
 
 @app.route('/callback', methods=['POST'])
 def callback():
+    payload  = request.get_json()
+    payload = json.loads(payload)
 
-    return 'HELLO' + request.data
+    return json.dumps(payload['id'] + payload['name'])
 
 if __name__ == "__main__":
     app.run()
