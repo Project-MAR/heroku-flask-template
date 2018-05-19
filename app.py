@@ -42,6 +42,26 @@ def check():
     }
     return json.dumps(payload)
 
+@app.route('/secure_check', methods=['GET'])
+@auth.login_required
+def check():
+
+    name = 'client'
+
+    payload = {
+        'to'        : name,
+        'length'    : 4,
+        'messages'  : [
+            {
+                'Id'       : 'plane text',
+                'Location' : 'Bangkok',
+                'Version'  : '1.0.0',
+		'Secure'   : 'True'
+            }
+        ]
+    }
+    return json.dumps(payload)
+
 @app.route('/callback', methods=['POST'])
 def callback():
 
