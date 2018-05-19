@@ -7,8 +7,8 @@ app = Flask(__name__)
 auth = HTTPBasicAuth()
 
 # Do not use in real world !!!
-username = root
-password = root
+username = 'root'
+password = 'root'
 
 @auth.get_password
 def get_pw(username):
