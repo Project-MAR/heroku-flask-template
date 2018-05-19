@@ -42,9 +42,9 @@ def check():
     }
     return json.dumps(payload)
 
-@app.route('/secure_check', methods=['GET'])
+@app.route('/check_withlogin', methods=['GET'])
 @auth.login_required
-def check():
+def check_withlogin():
 
     name = 'secure_client'
 
@@ -56,7 +56,7 @@ def check():
                 'Id'       : 'plane text',
                 'Location' : 'Bangkok',
                 'Version'  : '1.0.0',
-		        'Secure'   : 'True'
+                'Secure'   : 'True'
             }
         ]
     }
