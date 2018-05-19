@@ -46,7 +46,7 @@ def check():
 @auth.login_required
 def check():
 
-    name = 'client'
+    name = 'secure_client'
 
     payload = {
         'to'        : name,
@@ -56,7 +56,7 @@ def check():
                 'Id'       : 'plane text',
                 'Location' : 'Bangkok',
                 'Version'  : '1.0.0',
-		'Secure'   : 'True'
+		        'Secure'   : 'True'
             }
         ]
     }
